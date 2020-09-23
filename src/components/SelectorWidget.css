@@ -1,0 +1,68 @@
+.toolbarContainer {
+  position: absolute;
+  top: 0px;
+  left: 30%;
+  border: 1px solid rgba(197, 205, 220, 0.36);
+  /* border-radius: 7px; */
+  border-top: none;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.toolbarContainer .items {
+  display: flex;
+  max-height: 52px;
+  border-top: 1px solid rgba(195,205,220,0.36);
+}
+
+.items div {
+  padding: 15px;
+  border-right: 1px solid rgba(197, 205, 220, 0.36);
+}
+
+.items div:last-child {
+  border-right: none;
+}
+
+.toolbarSizes {
+  position: absolute;
+  top: 50px;
+  left: 33%;
+  border: 1px solid rgba(197, 205, 220, 0.36);
+  border-radius: 7px;
+  border-top: none;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.toolbarSizes.penToolbar {
+  left: 0;
+}
+.toolbarSizes .items div {
+  width: 60px;
+  box-sizing: border-box;
+}
+div.sm {
+  font-size: 1em;
+  padding: 19px;
+    width: 47px;
+}
+
+div.md {
+  font-size: 1.5em;
+  padding: 12px;
+}
+
+div.lg {
+  font-size: 2em;
+  padding: 8px;
+}
+
+div.xlg {
+  font-size: 2.25em;
+  padding: 5px;
+}
+
+.items .selected {
+  background-color: rgba(197, 205, 220, 0.36);
+}

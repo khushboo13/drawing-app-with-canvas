@@ -1,24 +1,24 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, {useState} from 'react';
+import Canvas from './components/canvas';
 import './App.css';
+import SelectorWidget from './components/SelectorWidget';
 
 function App() {
+  const [drawConfig, setDrawConfig] = useState({
+    color: '#EE92C2',
+    lineWidth: 4,
+    mode: 'pen',
+    eraserRadius: 1
+  })
+  const updateDrawConfig = (update) => {
+    setDrawConfig({...drawConfig, ...update })
+  }
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="main">
+        <SelectorWidget updateDrawConfig={updateDrawConfig} drawConfig={drawConfig}/>
+        <Canvas drawConfig={drawConfig} />
+      </div>
     </div>
   );
 }
