@@ -6,6 +6,7 @@ import './SelectorWidget.css'
 function SelectorWidget({ updateDrawConfig, drawConfig }) {
   const [showEraserSizes, setShowEraserSizes] = useState(false)
   const [showPenSizes, setShowPenSizes] = useState(false)
+  const [color, setColor] = useState(drawConfig.color)
 
   useEffect(() => {
     if (drawConfig.mode === 'eraser') {
@@ -63,6 +64,9 @@ function SelectorWidget({ updateDrawConfig, drawConfig }) {
           </div>
           <div name="highlight" className={drawConfig.mode === "highlight" ? "selected" : ""}>
             <FontAwesomeIcon id="highlight" icon={faHighlighter} />
+          </div>
+          <div style={{'padding': '10px'}}>
+            <input id="color" type="color" value={drawConfig.color} onChange={(e) => updateDrawConfig({color: e.target.value})}/>
           </div>
         </div>
         {showEraserSizes ?
