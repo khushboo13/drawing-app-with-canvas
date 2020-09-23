@@ -1,6 +1,8 @@
 # drawing-app-with-canvas
 Drawing app with React and Canvas
 
-# run
+# installation
 npm i
+
+# run
 npm run start
