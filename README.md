@@ -7,5 +7,5 @@ npm i
 # run
 npm run start
 
-#demo
+# demo
 https://ks-drawing-board.netlify.app/
