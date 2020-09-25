@@ -6,3 +6,6 @@ npm i
 
 # run
 npm run start
+
+#demo
+https://ks-drawing-board.netlify.app/
